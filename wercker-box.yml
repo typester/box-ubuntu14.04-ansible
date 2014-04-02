@@ -13,5 +13,8 @@ packages:
   - ansible@1.5.4
 script: |
   sudo aptitude update
-  sudo aptitude install -y python-dev python-pip libyaml-dev
+  sudo aptitude install -y libyaml-dev libgmp-dev
+  sudo aptitude install -y python-dev python-pip
   sudo pip install ansible==1.5.4
+  sudo aptitude purge --purge-unused -y libyaml-dev libgmp-dev
+  sudo aptitude purge --purge-unused -y python-dev python-pip
