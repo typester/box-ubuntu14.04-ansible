@@ -1,7 +1,7 @@
 name: ubuntu14.04-ansible1.5
-version: 1.0.0
+version: 1.0.1
 description: Ubuntu 14.04 with Ansible 1.5
-inherits: tvaughan/ubuntu14.04@1.0.0
+inherits: tvaughan/ubuntu14.04@1.0.1
 type: main
 platform: ubuntu@12.04
 keywords:
