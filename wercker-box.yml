@@ -10,8 +10,7 @@ keywords:
   - ansible
 script: |
   sudo apt-get update
-  sudo apt-get install curl git build-essential
-  sudo apt-get install python-pip
+  sudo apt-get install curl git build-essential libyaml-dev python-dev python-pip
   sudo pip install paramiko PyYAML jinja2 httplib2
   git clone git://github.com/ansible/ansible.git
   cd ansible
