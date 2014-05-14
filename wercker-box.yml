@@ -1,16 +1,19 @@
-name: ubuntu14.04-ansible1.5
-version: 1.0.2
-description: Ubuntu 14.04 with Ansible 1.5
+name: ubuntu14.04-ansible
+version: 1.0.0
+description: Ubuntu 14.04 with Ansible
 inherits: tvaughan/ubuntu14.04@1.0.1
 type: main
 platform: ubuntu@12.04
 keywords:
   - ubuntu
   - 14.04
-  - trusty
-  - ansible 1.5
-packages:
-  - ansible@1.5.4
+  - ansible
 script: |
-  sudo aptitude update
-  sudo aptitude install -y ansible=1.5.4+dfsg-1
+  sudo apt-get update
+  sudo apt-get install curl git build-essential
+  sudo apt-get install python-pip
+  sudo pip install paramiko PyYAML jinja2 httplib2
+  git clone git://github.com/ansible/ansible.git
+  cd ansible
+  git checkout v1.6.1
+  sudo make install
